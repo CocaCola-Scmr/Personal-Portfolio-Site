@@ -114,3 +114,43 @@ h3 {
 #date {
     color: #c4c4c4;
 }
+
+iframe {
+    width: 100%;
+    aspect-ratio: 1830/1080;
+    height: auto; /* Allow the height to adjust proportionally */
+    border: none;
+    border-radius: 20px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    margin-left: -20px;
+}
+  
+.socials > a {
+    background-image: linear-gradient(-20deg, #7A4DDB 0%, #34137B 100%);
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-radius: 300px;
+    margin: 0px 20px;
+}
+
+.socials > a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.socials > a > img {
+    width: 60px;
+    height: 60px;
+    transform: translateY(20px);
+}
