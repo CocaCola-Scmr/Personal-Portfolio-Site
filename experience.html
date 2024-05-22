@@ -49,20 +49,30 @@
             <p id="date">May 2021</p>
             <p>In 2021, I worked as a team member at Gadget Xperts, a mobile repair shop where I first gained experience in a retail setting. It was honestly pretty satisfying getting to professionally do what I spent most of my life doing for friends and family anyway - tech support! During my time, I learnt and refined skills like problem solving, communication, and customer service. Whether it was fixing devices for customers, determining their specific needs and issues, or simply making them feel welcome, I discovered that I’d excel in any role in tech.</p>
         </div>
-
-        <script>
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                    document.getElementById("topnav").style.backgroundColor = "#110328";
-                } else {
-                    document.getElementById("topnav").style.backgroundColor = "transparent";
-                }
-            }
-        </script>
         
     </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        const links = document.getElementsByTagName("a");
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("topnav").style.backgroundColor = "#9254DE";
+                document.getElementById("topnav").style.boxShadow = "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px";
+                for (var link of links) {
+                    link.style.color = "white";
+                }
+            } else {
+                document.getElementById("topnav").style.backgroundColor = "transparent";
+                document.getElementById("topnav").style.boxShadow = "none";
+                for (var link of links) {
+                    link.style.color = "#121212";
+                }
+            }
+        }
+    </script>
 
 </body>
 

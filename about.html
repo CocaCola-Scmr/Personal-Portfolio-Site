@@ -29,7 +29,7 @@
 
         <div class="timeline_item">
             <p>Name: Naman Lalwani</p>
-            <p>Age 18</p>
+            <p>Age: 18</p>
             <p>Degree: Bachelors of Computer Science @ UNSW</p>
             <p>Hobbies and Interests: Gym, coding, tech, badminton, tennis</p>
         </div>
@@ -41,6 +41,26 @@
             <a href = "https://github.com/CocaCola-Scmr" target="_blank"><img src="images/github.svg"></a>
         </div>
     </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        const links = document.getElementsByTagName("a");
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("topnav").style.backgroundColor = "#9254DE";
+                for (var link of links) {
+                    link.style.color = "white";
+                }
+            } else {
+                document.getElementById("topnav").style.backgroundColor = "transparent";
+                for (var link of links) {
+                    link.style.color = "#121212";
+                }
+            }
+        }
+    </script>
 
 </body>
 
