@@ -31,7 +31,7 @@ body {
     font-size: 22px;
     color: #121212;
     opacity: 1;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .topnav a:hover {
@@ -118,12 +118,13 @@ hr {
     margin-top: 150px;
 }
 
-.timeline_item > a {
-    padding: 15px;
-    background-image: linear-gradient(45deg, #9524ff, #2b24ff);
+.timeline_item > a, .home_message > a {
+    padding: 15px 30px;
+    background-image: linear-gradient(45deg, #9524ff 0%, #2b24ff 200%);
+    color: white;
     margin-top: 100px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight: bold;
 }
 
