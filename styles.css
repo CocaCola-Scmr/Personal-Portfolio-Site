@@ -29,15 +29,15 @@ body {
     padding: 10px 25px;
     text-decoration: none;
     font-size: 22px;
-    color: #121212;
+    color: inherit;
     opacity: 1;
     border-radius: 15px;
 }
 
 .topnav a:hover {
-    background-color: #9254DE;
-    color: white;
-    opacity: 0.8;
+    background-color: #ffffff;
+    color: black;
+    -webkit-text-fill-color: black;
     transition: 0.4s;
 }
 
@@ -60,15 +60,6 @@ h1 {
     font-size: 5vw;
     margin-top: -40px;
     margin-bottom: -40px;
-}
-
-#home-name {
-    background-image: linear-gradient(45deg,#9524ff 0%, #2b24ff 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: bold;
 }
 
 @media screen and (min-width: 1800px) {
@@ -123,9 +114,21 @@ hr {
     background-image: linear-gradient(45deg, #9524ff 0%, #2b24ff 200%);
     color: white;
     margin-top: 100px;
+    margin-right: 40px;
     text-decoration: none;
     border-radius: 15px;
     font-weight: bold;
+}
+
+.home_message > a {
+    color: black;
+    background-image: linear-gradient(45deg, white, white);
+    background-color: white;
+}
+
+.timeline_item > a:hover, .home_message > a:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.442);
+    transition: 0.4s;
 }
 
 #company {
