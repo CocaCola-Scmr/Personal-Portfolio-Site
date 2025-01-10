@@ -1,8 +1,8 @@
 body {
     font-family: 'nunito', sans-serif;
-    background-image: linear-gradient(-20deg, #fcf1ff 0%, #D5DCFF 100%);
+    background-image: linear-gradient(to right, #340A0A, #130E36);
     background-attachment: fixed;
-    color: #121212;
+    color: rgba(255, 255, 255, 0.815);
     letter-spacing: 0.6px;
     margin: 0;
     padding-left: 100px;
@@ -19,26 +19,67 @@ body {
     left: 0;
     right: 0;
     margin: 0px 0px;
-    padding: 20px 80px;
+    padding: 30px 80px;
     top: 0;
+}
+
+#gradient_text {
+    background: linear-gradient(45deg, #7A4DDB, #92225F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .topnav a {
     float: right;
     text-align: center;
-    padding: 10px 25px;
+    padding: 8px 35px;
     text-decoration: none;
     font-size: 22px;
     color: inherit;
     opacity: 1;
-    border-radius: 15px;
+    border-radius: 50px;
+    margin: 0px 4px;
+  }
+  
+.topnav a.active {
+    position: relative; 
+    background-color: transparent; 
+    color: white;
+}
+  
+.topnav a.active::before {
+    content: ""; /* Add content to the pseudo-element */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-image: linear-gradient(45deg, #7A4DDB 0%, #92225F 100%);
+    border-radius: 40px;
+    filter: blur(5px);
+    z-index: -1; 
+    transition: 0.4s;
+}
+
+.topnav a:hover::before {
+    content: ""; /* Add content to the pseudo-element */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border-radius: 40px;
+    filter: blur(5px);
+    z-index: -1; 
+    background-color: #ffffff22;
+    transition: 0.4s;
 }
 
 .topnav a:hover {
-    background-color: #ffffff;
-    color: black;
-    -webkit-text-fill-color: black;
-    transition: 0.4s;
+    position: relative; 
+    background-color: transparent; 
+    color: white;
 }
 
 .nav-left, .nav-right {
@@ -53,11 +94,11 @@ body {
 }
 
 #home_subtext {
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 
 h1 {
-    font-size: 5vw;
+    font-size: 4.6vw;
     margin-top: -40px;
     margin-bottom: -40px;
 }
@@ -99,7 +140,7 @@ h3 {
 hr {
     border: 3px solid transparent;
     border-radius: 50px;
-    border-image: linear-gradient(to right, #9524ff, #2b24ff);
+    border-image: linear-gradient(to right, #7A4DDB, #92225F);
     border-image-slice: 1;
 }
 
@@ -109,39 +150,40 @@ hr {
     margin-top: 150px;
 }
 
-.timeline_item > a, .home_message > a {
+.timeline_item > a {
+    position: relative; /* To allow absolute positioning of the blur element */
     padding: 15px 30px;
-    background-image: linear-gradient(45deg, #9524ff 0%, #2b24ff 200%);
+    background-color: transparent; /* Make the background transparent for the link */
     color: white;
     margin-top: 100px;
     margin-right: 40px;
     text-decoration: none;
-    border-radius: 15px;
-    font-weight: bold;
-}
-
-.home_message > a {
-    color: black;
-    background-image: linear-gradient(45deg, white, white);
-    background-color: white;
-}
-
-.timeline_item > a:hover, .home_message > a:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.442);
-    transition: 0.4s;
+    border-radius: 40px;
+  }
+  
+.timeline_item > a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #7A4DDB 0%, #92225F 100%);
+    border-radius: 40px;
+    filter: blur(5px);
+    z-index: -1; /* Place the blur behind the text */
 }
 
 #company {
-    background-image: linear-gradient(to bottom,#9524ff 0%, #2b24ff 100%);
-    color: transparent;
-    -webkit-background-clip: text;
+    background: linear-gradient(45, #7A4DDB, #92225F);
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
     font-weight: bold;
 }
 
 #date {
-    color: #232323;
+    color: white;
 }
 
 iframe {
@@ -159,7 +201,7 @@ iframe {
 }
   
 .socials > a {
-    background-color: #9254DE;
+    background-image: linear-gradient(45deg, #7A4DDB 0%, #92225F 100%); 
     width: 70px;
     height: 70px;
     padding: auto;
